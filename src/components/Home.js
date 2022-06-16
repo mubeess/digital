@@ -5,6 +5,9 @@ import Details from './Details';
 import { Divider } from '@mui/material';
 import Calculator from './Calculator';
 import Why from './Why';
+import Make from './Make';
+import Steps from './Steps';
+import Footer from './Footer';
 
 const StyledContainr=styled.div`
 min-height: 100vh;
@@ -15,6 +18,10 @@ overflow-x: hidden;
     text-align: center;
     font-weight: 400;
     font-size: 60px;
+}
+.zero2{
+    text-align: center;
+    font-weight: 400;
 }
 .send-money{
     text-align:center;
@@ -43,6 +50,12 @@ export default function Home() {
             </h4>
             <Calculator/>
             <Why/>
+            <Make/>
+            <h1 className='zero2'>
+            GET STARTED IN 3 STEPS AND  ENJOY DIGITAL PAY NOW 
+            </h1>
+            <Steps/>
+            <Footer/>
         </StyledContainr>
     )
 }

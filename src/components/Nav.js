@@ -1,16 +1,18 @@
 import { Button } from '@mui/material';
 import React from 'react'
+import { useNavigate} from 'react-router-dom';
 import styled from 'styled-components'
 
 const StyledNav=styled.nav`
 width: 100%;
-height: 103px;
+max-height: 103px;
 background-color:white;
 display: flex;
 flex-direction: row;
 box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 padding: 10px;
 overflow-x: hidden;
+z-index: 100px;
 
 .logo{
     display: grid;
@@ -53,6 +55,7 @@ p{
 }
 `;
 export default function Nav() {
+    let navigate = useNavigate();
     return (
         <StyledNav>
          <div className='logo'>
@@ -67,7 +70,9 @@ export default function Nav() {
               <li>Help</li>
               <li>sign in</li>
               <li>
-              <Button variant="contained">Join now</Button>
+              <Button onClick={()=>{
+              navigate('sign-up')
+              }} variant="contained">Join now</Button>
               </li>
           </ul>
          </div>

@@ -38,7 +38,6 @@ overflow-x: hidden;
 export default function Home() {
     return (
         <StyledContainr>
-            <Nav/>
             <Details/>
             <Divider style={{width:'100%',marginTop:10}}/>
             <h1 className='zero'>
@@ -55,7 +54,7 @@ export default function Home() {
             GET STARTED IN 3 STEPS AND  ENJOY DIGITAL PAY NOW 
             </h1>
             <Steps/>
-            <Footer/>
+           
         </StyledContainr>
     )
 }

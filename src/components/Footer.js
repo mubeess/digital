@@ -4,7 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledContainr=styled.div`
-height:250px;
+max-height:250px;
 background-color: white;
 width: 100%;
 display: flex;

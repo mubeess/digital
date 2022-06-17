@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import React from 'react'
-import { useNavigate} from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import styled from 'styled-components'
 
 const StyledNav=styled.nav`
@@ -47,9 +47,15 @@ p{
         justify-content: space-around;
         position: relative;
         margin-top: 40px;
+        a{
+            text-decoration: none;
+            color: black;
+        }
         li{
         list-style: none;
         display: inline;
+        cursor: pointer;
+        
         }
     }
 }
@@ -68,7 +74,9 @@ export default function Nav() {
               <li>Receive</li>
               <li>About Us</li>
               <li>Help</li>
+              <Link to='login'>
               <li>sign in</li>
+              </Link>
               <li>
               <Button onClick={()=>{
               navigate('sign-up')
